@@ -1,0 +1,7 @@
+name: expected Job Example
+on: [pull_request]
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 60  # Simulate a long-running job

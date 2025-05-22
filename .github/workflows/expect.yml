@@ -1,9 +1,0 @@
-name: Expected Status Example
-
-on: [workflow_dispatch]
-
-jobs:
-  job-1:
-  runs-on: ubuntu-latest
-    steps:
-      - run: sleep 60
