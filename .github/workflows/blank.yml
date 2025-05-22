@@ -1,0 +1,9 @@
+name: Deploy Example
+on: [workflow_dispatch]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: STAGING  # This triggers the protection rule
+    steps:
+      - run: echo "Deploying to production"
