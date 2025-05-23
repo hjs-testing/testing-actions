@@ -1,13 +1,20 @@
 name: sample workflow
 on: [workflow_dispatch]
 jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: job1 step1
+        run: echo "first job"
+      
   my-job:
     runs-on: ubuntu-latest
-    timeout-minutes: 1 # Set the job timeout to 10 minutes
-
+    timeout-minutes: 1
     steps:
-      # Your workflow steps
-      - name: Run a command
+      - name: job2 step1
+        run: echo "Second job"
+      - name: job2 step2
         run: |
           echo "Starting a long-running process..."
           sleep 65 # Sleep for 10 minutes to cause a timeout
