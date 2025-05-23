@@ -3,6 +3,7 @@ on: [workflow_dispatch]
 jobs:
   first_job:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     steps:
       - name: job1 step1
         run: echo "first job"
