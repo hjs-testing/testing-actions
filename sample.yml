@@ -1,0 +1,16 @@
+name: Waiting Status Example
+# on: [pull_request]
+on: [workflow_dispatch]
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "First job started"
+      - run: sleep 60  # Simulate a long-running job
+      - run: echo "First job completed"
+  
+  second_job:
+    needs: first_job  # This job will be 'waiting' until first_job completes
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Second job"
