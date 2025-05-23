@@ -8,3 +8,5 @@ jobs:
     environment: STAGING  # This triggers the protection rule
     steps:
       - run: echo "Deploying to production"
+
+
