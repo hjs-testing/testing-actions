@@ -1,0 +1,18 @@
+name: sample workflow
+on: [workflow_dispatch]
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: job1
+        run: |
+          echo "Starting a long-running process..."
+          sleep 65 # Sleep for 10 minutes to cause a timeout
+          echo "Process finished."
+      
+  second_job:
+    runs-on: ubuntu-latest
+    needs: first_job
+    steps:
+      - name: job2
+        run: echo "Second job"
