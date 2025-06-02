@@ -13,7 +13,7 @@ jobs:
     timeout-minutes: 1
     steps:
       - name: job2 step1
-        run: echo "Second job"
+          run: echo "Second job"
       - name: job2 step2
         run: |
           echo "Starting a long-running process..."
