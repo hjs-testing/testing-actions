@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
-      - name: job1 step1
+       - name: job1 step1
         run: echo "first job"
       
   my-job:
