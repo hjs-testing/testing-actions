@@ -1,4 +1,4 @@
-name: sample workflow
+name: job waiting workflow
 on: [workflow_dispatch]
 jobs:
   first_job:
